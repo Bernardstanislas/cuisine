@@ -1,0 +1,18 @@
+---
+title: 'Spaetzle'
+description: "La pâte à pocher prête en dix minutes : un œuf, de la farine, de l'eau gazeuse pour la légèreté."
+category: 'Accompagnements'
+tags: [alsace, rapide, base]
+portions: 1
+author: ['Stanislas']
+photo_credit: 'Photo : Kobako, Wikimedia Commons (CC BY-SA 2.5)'
+notes: "Les proportions sont pour une personne : les multiplier avec le sélecteur selon le nombre de convives."
+---
+
+[Mélanger] Dans un #saladier{}, battre l'@œuf{1} avec l'@eau gazeuse{60 g}.
+
+[Incorporer] Ajouter la @farine{100 g} en trois fois, en mélangeant bien entre chaque ajout.
+
+[Assaisonner] Ajouter le @=sel{1 pincée} et l'@assaisonnement{}(au goût).
+
+[Pocher] Passer la pâte à travers une #passoire à gros trous{} au-dessus d'une #casserole{} d'eau bouillante salée. Égoutter les spaetzle dès qu'ils remontent à la surface, au bout de ~{2 min} environ.
