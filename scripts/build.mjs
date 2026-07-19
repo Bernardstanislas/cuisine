@@ -8,7 +8,8 @@ import { execFileSync } from "node:child_process";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const DIST = join(ROOT, "dist");
-const SITE_URL = "https://bernardstanislas.github.io/cuisine";
+const SITE_DOMAIN = "cuisine.salutchef.fr";
+const SITE_URL = `https://${SITE_DOMAIN}`;
 const REPO_URL = "https://github.com/Bernardstanislas/cuisine";
 const SITE_NAME = "Carnet de cuisine";
 
@@ -602,12 +603,15 @@ mkdirSync(DIST, { recursive: true });
 cpSync(join(ROOT, "assets"), join(DIST, "assets"), { recursive: true });
 
 writeFileSync(join(DIST, "index.html"), buildHome(recipes));
+// Domaine personnalisé : le fichier CNAME doit être republié à chaque
+// déploiement, sinon la branche gh-pages orpheline le perdrait.
+writeFileSync(join(DIST, "CNAME"), `${SITE_DOMAIN}\n`);
 writeFileSync(join(DIST, "404.html"), pageShell({
-  root: "/cuisine/",
+  root: "/",
   title: `Page introuvable — ${SITE_NAME}`,
   description: "Cette page n'existe pas.",
   ogImage: `${SITE_URL}/assets/img/${recipes[0].slug}-hero.jpg`,
-  body: `<main class="wrap notfound"><h1>Rien sur le feu ici.</h1><p><a href="/cuisine/">← Retour au carnet</a></p></main>`,
+  body: `<main class="wrap notfound"><h1>Rien sur le feu ici.</h1><p><a href="/">← Retour au carnet</a></p></main>`,
 }));
 
 for (const r of recipes) {
