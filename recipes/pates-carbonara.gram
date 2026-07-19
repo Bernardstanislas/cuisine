@@ -1,0 +1,20 @@
+---
+title: 'Pâtes à la carbonara'
+description: "La vraie carbonara romaine : guanciale, pecorino et jaunes d'œufs. Sans un gramme de crème."
+category: 'Plats'
+tags: [pâtes, italien, rapide]
+portions: 4
+author: ['Stanislas']
+date: 2026-07-19
+notes: "Toute la difficulté tient dans l'assemblage : hors du feu, sinon les œufs coagulent et la sauce granule."
+---
+
+[Préparer] Détailler le @guanciale{150 g}|@pancetta{150 g} en lardons épais. Râper finement le @pecorino romano{100 g}.
+
+[Dorer] Faire dorer le guanciale à ^{feu moyen} dans une #grande poêle{} pendant ~{8 min}, jusqu'à ce qu'il soit croustillant. Couper le feu et le laisser dans la poêle avec son gras.
+
+[Cuire] Cuire les @spaghetti{400 g} dans une #grande casserole{} d'eau bouillante salée avec le @-gros sel{10 g}, ~{1 min} de moins que l'indication du paquet. Réserver une louche d'eau de cuisson. ->&pâtes al dente{}
+
+[Fouetter] Pendant ce temps, fouetter les @jaunes d’œufs{4}<@œufs{4} avec le pecorino et le @=poivre noir du moulin{2 g} dans un #saladier{}. Détendre avec une cuillère d'eau de cuisson pour obtenir une crème épaisse.
+
+[Assembler] Hors du feu, verser les &pâtes al dente{} dans la poêle, puis la crème de pecorino. Mélanger vivement en ajoutant un peu d'eau de cuisson jusqu'à obtenir une sauce nappante et brillante. Servir immédiatement.

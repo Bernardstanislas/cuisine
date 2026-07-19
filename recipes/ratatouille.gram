@@ -1,0 +1,20 @@
+---
+title: 'Ratatouille'
+description: "La niçoise, la vraie : chaque légume revenu séparément, puis un mijotage court où tout se rencontre."
+category: 'Plats'
+tags: [végétarien, été, provence]
+portions: 6
+author: ['Stanislas']
+date: 2026-07-19
+notes: "Cuire les légumes séparément prend du temps mais change tout : chacun garde sa texture. Excellente froide le lendemain."
+---
+
+[Préparer] Détailler les @aubergines{2}(en cubes), les @courgettes{3}(en demi-rondelles), les @poivrons rouges{2}(en lanières) et les @oignons{2}(émincés). Monder les @tomates{6}(concassées). Écraser l'@ail{4 gousses}.
+
+[Revenir] Dans une #sauteuse{}, faire revenir successivement et séparément les aubergines, les courgettes puis les poivrons dans l'@huile d’olive{6 cs}, à ^{feu vif}, ~{8 min} par légume. Saler légèrement chaque fournée et réserver au fur et à mesure.
+
+[Compoter] Dans la même sauteuse, faire fondre les oignons ~{5 min} à ^{feu moyen}. Ajouter les tomates, l'ail, le @bouquet garni{1} et le @?piment d'Espelette{1 pincée}. Laisser compoter ~{10 min}.
+
+[Assembler] Réunir tous les légumes dans la sauteuse, saler avec le @=sel{1 cc}, mélanger délicatement et laisser mijoter à ^{feu doux}, à découvert, ~_mijotage{30 min}.
+
+[Finir] Retirer le bouquet garni, rectifier l'assaisonnement et parsemer de @basilic{8 feuilles}(ciselées). Servir chaud, tiède ou froid, avec un filet d'huile d'olive crue.

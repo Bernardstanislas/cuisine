@@ -1,0 +1,19 @@
+{
+  "name": "cuisine",
+  "private": true,
+  "description": "Carnet de recettes écrit en langage Gram, publié sur GitHub Pages",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "gram check --strict --skip-db 'recipes/**/*.gram'",
+    "build": "npm run check && node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && python3 -m http.server 8000 -d dist"
+  },
+  "devDependencies": {
+    "@gram-lang/cli": "^1.0.0-beta.3",
+    "@gram-lang/kitchen": "^1.0.0-beta.3",
+    "@gram-lang/parser": "^1.0.0-beta.3"
+  }
+}

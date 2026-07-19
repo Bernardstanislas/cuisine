@@ -1,0 +1,30 @@
+---
+title: 'Bœuf bourguignon'
+description: "Le grand mijoté bourguignon : viande marinée au vin rouge la veille, puis confite trois heures en cocotte."
+category: 'Plats'
+tags: [mijoté, hiver, classique]
+portions: 6
+author: ['Stanislas']
+date: 2026-07-19
+notes: "Encore meilleur réchauffé le lendemain. Servir avec des tagliatelles fraîches ou des pommes de terre vapeur."
+---
+
+## Marinade ~{-1d} ->&viande marinée{}
+
+[Découper] Détailler le @paleron de bœuf{1.5 kg} en cubes de 5 cm. Les déposer dans un #saladier{} avec les @carottes{3}(en rondelles), les @oignons{2}(émincés), l'@ail{3 gousses}(écrasées), le @bouquet garni{1} et les @grains de poivre{10}.
+
+[Mariner] Couvrir avec le @vin rouge de Bourgogne{75 cl}, filmer au contact et laisser mariner au réfrigérateur ~_marinade{12 h}.
+
+## Cuisson
+
+[Égoutter] Verser la &viande marinée{} dans une #passoire{} posée sur un saladier pour récupérer le vin. Éponger soigneusement les morceaux de viande avec du papier absorbant.
+
+[Saisir] Dans une #cocotte en fonte{}, faire dorer les @lardons fumés{200 g} à ^{feu vif} puis les réserver. Saisir les morceaux de viande sur toutes les faces, en plusieurs fournées, dans le gras des lardons.
+
+[Singer] Remettre viande et lardons dans la cocotte, saupoudrer avec la @farine{2 cs} et laisser roussir ~{3 min} en remuant.
+
+[Mouiller] Verser le vin de la marinade avec ses légumes, compléter avec le @fond de veau{25 cl}. Assaisonner avec le @=sel{1 cc}. Porter à frémissement en grattant les sucs.
+
+[Mijoter] Couvrir et laisser mijoter à ^{feu doux} pendant ~_mijotage{180 min}. La viande doit se défaire à la fourchette.
+
+[Garnir] Faire sauter les @champignons de Paris{250 g}(coupés en quatre) dans le @beurre{20 g}. Les ajouter dans la cocotte avec les @oignons grelots{12} pour les ~{30 min} de fin de cuisson. Rectifier l'assaisonnement.
