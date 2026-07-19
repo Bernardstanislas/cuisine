@@ -11,8 +11,9 @@
     const empty = document.getElementById("empty");
     let category = "";
 
+    const fold = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
     const apply = () => {
-      const q = (search.value || "").trim().toLowerCase();
+      const q = fold((search.value || "").trim());
       let shown = 0;
       for (const card of cards.children) {
         const okCat = !category || card.dataset.category === category;
