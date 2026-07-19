@@ -1,0 +1,40 @@
+assets/app.js
+  s_29cf399ae36f97::t_d19ec3d02ad6c1 14,16
+assets/favicon.svg
+  s_29cf399ae36f97::t_b314be592ba2c0 2,4
+assets/site.css
+  s_29cf399ae36f97::t_4ec3e5aa1e9ada 6-16,23-34,40
+  s_29cf399ae36f97::t_3e724775996fad 73,76,81-82,85-88,92,94
+  s_29cf399ae36f97::t_cad4ccc0854dc2 41
+scripts/build.mjs
+  s_29cf399ae36f97::t_8cff3236e65668 399
+  s_29cf399ae36f97::t_7e164bdc99ff75 470-471
+  s_29cf399ae36f97::t_f206e2f2ba2fa8 578
+  s_29cf399ae36f97::t_b504938a9f5006 20-26
+  s_29cf399ae36f97::t_23ae0e683f60c1 584
+  s_29cf399ae36f97::t_0a490277383282 446-447
+  s_29cf399ae36f97::t_0ef01d2105c01e 173,179
+  s_29cf399ae36f97::t_b1c09ae5bfa11a 421-423,425
+DESIGN.md
+  s_29cf399ae36f97::t_1571fabdfdd3be 42-44
+  s_29cf399ae36f97::t_74b292497eb183 49
+  s_29cf399ae36f97::t_26905134db9f16 5,9,13-22,26
+PRODUCT.md
+  s_29cf399ae36f97::t_baac3cc009dc65 28-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "c0cd8118e6af14284c347ce608fcd01e403a3e78",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
