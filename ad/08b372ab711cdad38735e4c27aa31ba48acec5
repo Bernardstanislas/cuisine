@@ -1,0 +1,20 @@
+scripts/build.mjs
+  s_29cf399ae36f97::t_485f9618a24104 11-12
+  s_29cf399ae36f97::t_fa256ac33ba6c1 606-608,610,614
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "ad08b372ab711cdad38735e4c27aa31ba48acec5",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
