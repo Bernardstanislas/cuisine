@@ -1,0 +1,20 @@
+recipes/tiramisu.gram
+  s_29cf399ae36f97::t_724efa680cfd93 13
+  s_29cf399ae36f97::t_3d905fe8e5e774 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "727db588ed2173c7cd6d8efb1cc4318bb5a55f04",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
