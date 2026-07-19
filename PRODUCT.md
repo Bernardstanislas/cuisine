@@ -25,8 +25,8 @@ Précis, appétissant, artisanal. L'objet physique de référence : un vieux liv
 ## Design Principles
 
 1. **La recette d'abord** — chaque écran de recette est optimisé pour cuisiner : gros corps de texte, quantités en évidence, états cochables, rien entre le titre et les ingrédients.
-2. **La sémantique du langage est visible** — ingrédients, minuteurs, températures et variables intermédiaires du langage Gram sont typés visuellement ; le site rend palpable le fait que la recette est du code.
-3. **La chaleur est dans la couleur, pas dans le fond** — fond blanc pur pour la lisibilité en cuisine ; l'olive profond porte l'identité, le paprika porte la chaleur (temps et températures).
+2. **La sémantique du langage est visible, la technique est invisible** — ingrédients, minuteurs, températures et variables intermédiaires sont typés visuellement, mais l'interface ne parle jamais de fichiers, de commits ni de langage : la mécanique as-code reste dans le README (retour explicite de Stanislas, 2026-07-19).
+3. **La chaleur est dans la couleur, pas dans le fond** — fond blanc pur pour la lisibilité en cuisine ; le bordeaux profond porte l'identité en touches, l'ambre porte la chaleur (temps et températures).
 4. **Une photo décisive par plat** — l'image donne faim ; jamais de bloc coloré à la place d'une photo.
 
 ## Accessibility & Inclusion

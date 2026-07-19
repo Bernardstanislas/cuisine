@@ -17,6 +17,13 @@ const SITE_NAME = "Carnet de cuisine";
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+// « crème » → « creme » : la recherche ignore les accents (même pli côté app.js)
+const fold = (s) =>
+  String(s)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "");
+
 const UNIT_LABELS = { cs: "c. à soupe", cc: "c. à café" };
 const prettyUnit = (u) => (u ? UNIT_LABELS[u] ?? u : "");
 
@@ -163,13 +170,13 @@ function renderHistory(entries, file) {
       (e) => `<li${e.creation ? ' class="creation"' : ""}>
   <time datetime="${esc(e.date.slice(0, 10))}">${esc(DATE_FR.format(new Date(e.date)))}</time>
   <p>${esc(e.comment)}</p>
-  <a href="${REPO_URL}/commit/${e.sha}">voir le diff</a>
+  <a href="${REPO_URL}/commit/${e.sha}">voir la modification</a>
 </li>`
     )
     .join("\n");
   return `<section class="history">
       <h2>Affinages</h2>
-      <p class="hist-note">l'historique git de <code>${esc(file)}</code> — une recette s'améliore commit après commit</p>
+      <p class="hist-note">la recette telle qu'elle s'améliore, retouche après retouche</p>
       <ol class="hist">
 ${lis}
       </ol>
@@ -389,7 +396,7 @@ function pageShell({ root, title, description, ogImage, body, slug }) {
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="${slug ? "article" : "website"}">
 <meta property="og:image" content="${ogImage}">
-<meta name="theme-color" content="#3f4a1f">
+<meta name="theme-color" content="#722f37">
 <link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -411,8 +418,11 @@ function renderCard(r) {
   const c = r.compiled;
   const retro = recipeRetro(c);
   const tags = [categoryOf(c), ...(Array.isArray(c.meta.tags) ? c.meta.tags : [])];
+  const ingredients = Object.values(c.registry.ingredients)
+    .filter((e) => !e.is_intermediate)
+    .map((e) => e.name);
   return `<a class="card" href="recettes/${r.slug}/" data-category="${esc(categoryOf(c))}" data-search="${esc(
-    [c.title, c.meta.description ?? "", tags.join(" ")].join(" ").toLowerCase()
+    fold([c.title, c.meta.description ?? "", tags.join(" "), ingredients.join(" ")].join(" "))
   )}">
   <figure><img src="assets/img/${r.slug}-card.jpg" srcset="assets/img/${r.slug}-card.jpg 640w, assets/img/${r.slug}-hero.jpg 1280w" sizes="(min-width: 700px) 340px, 100vw" width="640" height="480" alt="${esc(c.title)}" loading="lazy"></figure>
   <div class="card-body">
@@ -433,9 +443,8 @@ function buildHome(recipes) {
   );
   const body = `<header class="masthead">
   <div class="wrap">
-    <p class="masthead-note">un plat par fichier<span aria-hidden="true"> · </span>une recette par commit</p>
-    <h1>Carnet de<br>cuisine</h1>
-    <p class="masthead-sub">${recipes.length} recettes de famille écrites en <a href="https://gram-lang.org">langage Gram</a>, relues, versionnées et servies par <a href="${REPO_URL}">un dépôt Git</a>. L'édition se fait au clavier, la cuisine se fait ici.</p>
+    <h1>Carnet de <em>cuisine</em></h1>
+    <p class="masthead-sub">${recipes.length} recettes de famille, éprouvées et réglées au gramme près : mijotés du dimanche, pain de campagne et desserts de goûter.</p>
   </div>
 </header>
 <main class="wrap">
@@ -453,14 +462,13 @@ function buildHome(recipes) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <p>Chaque recette de ce carnet est un fichier <code>.gram</code> — <a href="https://gram-lang.org">un langage de programmation pour la cuisine de précision</a>. Le site est régénéré à chaque commit et publié sur GitHub Pages.</p>
     <p><a href="${REPO_URL}">Code source & recettes</a> · Photos <a href="https://unsplash.com">Unsplash</a></p>
   </div>
 </footer>`;
   return pageShell({
     root: "",
-    title: `${SITE_NAME} — recettes écrites en Gram`,
-    description: "Carnet de recettes familial, écrit en langage Gram et publié comme du code.",
+    title: `${SITE_NAME} — recettes de famille`,
+    description: "Des recettes de famille éprouvées et réglées au gramme près : mijotés, pain de campagne, desserts.",
     ogImage: `${SITE_URL}/assets/img/${recipes[0].slug}-hero.jpg`,
     body,
   });
@@ -567,13 +575,13 @@ function buildRecipePage(r) {
     ${renderHistory(recipeHistory(r.file, r.slug), r.file)}
 
     <footer class="recipe-foot">
-      <p class="ascode">Cette recette est du code : <a href="${REPO_URL}/blob/main/recipes/${r.file}"><code>${r.file}</code></a> · <a href="recette.json"><code>recette.json</code></a>${c.meta.source ? ` · source : <a href="${esc(String(c.meta.source).split(" ")[0])}">${esc(String(c.meta.source).replace(/^https?:\/\//, "").split(/[/\s]/)[0])}</a>` : ""}</p>
+      <p class="ascode"><a href="${REPO_URL}/blob/main/recipes/${r.file}">Texte source de la recette</a>${c.meta.source ? ` · d’après <a href="${esc(String(c.meta.source).split(" ")[0])}">${esc(String(c.meta.source).replace(/^https?:\/\//, "").split(/[\/\s]/)[0])}</a>` : ""}</p>
       <p><button type="button" id="reset" hidden>Réinitialiser les coches</button></p>
     </footer>
   </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap"><p><a href="${root}">${SITE_NAME}</a> — recettes écrites en <a href="https://gram-lang.org">Gram</a>, servies par <a href="${REPO_URL}">Git</a>.</p></div>
+  <div class="wrap"><p><a href="${root}">${SITE_NAME}</a> · Photos <a href="https://unsplash.com">Unsplash</a></p></div>
 </footer>`;
 
   return pageShell({

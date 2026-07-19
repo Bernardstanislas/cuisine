@@ -2,28 +2,28 @@
 
 ## Theme
 
-Livre de cuisine française composé comme une page de code annotée. Lumière de plein jour : fond blanc pur, encre olive-noire, un olive profond engagé (Committed) qui porte l'identité, un paprika qui porte tout ce qui chauffe (minuteurs, températures). Thème sombre « cuisine du soir » via `prefers-color-scheme`.
+Livre de cuisine française, sobre et appétissant. Lumière de plein jour : fond blanc pur, encre chaude, un bordeaux profond (Restrained) qui porte l'identité en petites touches, un ambre qui porte tout ce qui chauffe (minuteurs, températures). L'accueil est typographique sur fond blanc — **pas de bloc de couleur drapé** (essayé en olive, rejeté). Thème sombre « cuisine du soir » via `prefers-color-scheme`.
 
 ## Color
 
-Palette OKLCH — la graine de marque est l'olive (hue 110–115).
+Palette OKLCH — la couleur de marque est le bordeaux (hue ~20).
 
 ```css
 :root {
-  --bg: oklch(1 0 0);                      /* blanc pur, jamais crème */
-  --surface: oklch(0.965 0.006 115);       /* panneaux, cartes */
-  --ink: oklch(0.24 0.02 115);             /* texte courant, ≥ 12:1 */
-  --muted: oklch(0.45 0.02 115);           /* texte secondaire, ≥ 5:1 */
-  --primary: oklch(0.42 0.09 115);         /* olive profond — identité, texte blanc dessus */
-  --primary-strong: oklch(0.34 0.08 115);
-  --primary-tint: oklch(0.955 0.022 115);  /* surlignage ingrédients */
-  --accent: oklch(0.55 0.16 40);           /* paprika — chaleur : minuteurs, températures */
-  --accent-tint: oklch(0.945 0.028 45);
-  --line: oklch(0.90 0.008 115);
+  --bg: oklch(1 0 0);                     /* blanc pur, jamais crème */
+  --surface: oklch(0.966 0.005 20);       /* panneaux, cartes */
+  --ink: oklch(0.24 0.015 20);            /* texte courant, ≥ 12:1 */
+  --muted: oklch(0.45 0.015 20);          /* texte secondaire, ≥ 5:1 */
+  --primary: oklch(0.40 0.13 20);         /* bordeaux — identité, texte blanc dessus */
+  --primary-strong: oklch(0.32 0.12 20);
+  --primary-tint: oklch(0.96 0.016 20);   /* surlignage ingrédients */
+  --accent: oklch(0.55 0.15 55);          /* ambre brûlé — chaleur : minuteurs, températures */
+  --accent-tint: oklch(0.945 0.03 55);
+  --line: oklch(0.90 0.007 20);
 }
 ```
 
-Règles : texte blanc sur tout aplat olive ou paprika (effet Helmholtz-Kohlrausch) ; le paprika est réservé au vocabulaire de la chaleur ; l'olive ne dépasse jamais ~40 % d'une page de recette (la cuisine se fait sur fond blanc).
+Règles : texte blanc sur tout aplat bordeaux ou ambre (effet Helmholtz-Kohlrausch) ; l'ambre est réservé au vocabulaire de la chaleur ; le bordeaux reste un accent (liens, chiffres, badges) — la couleur des pages vient des photos.
 
 ## Typography
 
@@ -39,12 +39,14 @@ Règles : texte blanc sur tout aplat olive ou paprika (effet Helmholtz-Kohlrausc
 - **Minuteur passif** (repos, four) : pastille `--accent-tint`, texte paprika foncé, symbole ◷.
 - **Température** : pastille `--accent-tint` avec valeur en gras.
 - **Ustensile** : souligné pointillé discret, pas de couleur.
-- **Variable intermédiaire** (`->&nom` / `&nom`) : badge mono arrondi olive (`→ nom` à la déclaration, `nom` à l'usage).
+- **Variable intermédiaire** (`->&nom` / `&nom`) : badge mono arrondi bordeaux (`→ nom` à la déclaration, `nom` à l'usage).
+
+**Ton éditorial** : jamais de vocabulaire technique dans l'interface (fichier, commit, git, langage, JSON…). La mécanique as-code reste dans le README ; le site parle cuisine. Les seuls liens vers le dépôt : « Code source & recettes » (accueil), « Texte source de la recette » et « voir la modification » (page recette).
 
 ## Layout
 
 - Mobile-first, une colonne ; page recette max 68ch de texte.
-- Accueil : en-tête olive drapé (Committed), cartes photo `repeat(auto-fit, minmax(280px, 1fr))`, filtres par catégorie en chips.
+- Accueil : en-tête typographique blanc (Bodoni, « cuisine » en italique bordeaux), cartes photo `repeat(auto-fit, minmax(280px, 1fr))`, filtres par catégorie en chips.
 - Page recette : photo pleine largeur, titre, chips méta (portions · actif · total · rétro-planning), panneau ingrédients cochable avec pas-à-pas de portions, étapes numérotées cochables.
 
 ## Motion
