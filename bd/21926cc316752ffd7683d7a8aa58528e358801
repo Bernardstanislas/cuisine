@@ -1,0 +1,23 @@
+README.md
+  s_29cf399ae36f97::t_5e3d00a46187e5 1-100
+DESIGN.md
+  s_29cf399ae36f97::t_9edbb18387dd75 1-52
+PRODUCT.md
+  s_29cf399ae36f97::t_1bc98bdedcc544 1-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "bd21926cc316752ffd7683d7a8aa58528e358801",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
