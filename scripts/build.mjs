@@ -331,6 +331,15 @@ function renderShoppingItem(compiled, item) {
   const name = item.alias ?? ingName(compiled, item.id);
   const optional = (item.modifiers ?? []).includes("optional") || (item.modifierSet && item.modifierSet.has?.("optional"));
   const fixed = Boolean(item.fixed ?? item.allFixed);
+  // L'agrégateur remplace une plage (« 1-2 ») par sa moyenne (1,5) : quand
+  // l'ingrédient n'a qu'une utilisation, on réaffiche la plage d'origine.
+  let displayQty = item.qty;
+  if (item._usageIds?.length === 1) {
+    for (const sec of compiled.sections) {
+      const usage = (sec.ingredients ?? []).find((u) => u._usageId === item._usageIds[0]);
+      if (usage?.qty?.type === "range") displayQty = usage.qty;
+    }
+  }
   let qty = "";
   if (item.relative && Array.isArray(item.variable_entries)) {
     // « 2% of farine de blé » → 2 % × 450 g = 9 g (reste proportionnel au scaling)
@@ -353,10 +362,10 @@ function renderShoppingItem(compiled, item) {
       total > 0
         ? `<b class="qty" data-qty="${Math.round(total * 100) / 100}" title="${label}">${fmtNumber(total)}${unit ? ` ${esc(prettyUnit(unit))}` : ""}</b>`
         : `<b class="qty">${label}</b>`;
-  } else if (item.qty != null && typeof item.qty === "object" && item.qty.type === "RelativeQuantity") {
-    qty = renderQty(item.qty, null, { relTargetName: item.qty.target });
-  } else if (item.qty != null) {
-    qty = renderQty(item.qty, item.unit, { fixed });
+  } else if (displayQty != null && typeof displayQty === "object" && displayQty.type === "RelativeQuantity") {
+    qty = renderQty(displayQty, null, { relTargetName: displayQty.target });
+  } else if (displayQty != null) {
+    qty = renderQty(displayQty, item.unit, { fixed });
   }
   if (item.otherUnits) {
     for (const [u, q] of Object.entries(item.otherUnits)) {
