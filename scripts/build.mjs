@@ -444,7 +444,7 @@ function buildHome(recipes) {
   const body = `<header class="masthead">
   <div class="wrap">
     <h1>Carnet de <em>cuisine</em></h1>
-    <p class="masthead-sub">${recipes.length} recettes de famille, éprouvées et réglées au gramme près : mijotés du dimanche, pain de campagne et desserts de goûter.</p>
+    <p class="masthead-sub">${recipes.length === 1 ? "Une recette" : `${recipes.length} recettes`} de famille, éprouvée${recipes.length === 1 ? "" : "s"}, réglée${recipes.length === 1 ? "" : "s"} au gramme près et affinée${recipes.length === 1 ? "" : "s"} à chaque essai.</p>
   </div>
 </header>
 <main class="wrap">
@@ -462,7 +462,7 @@ function buildHome(recipes) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <p><a href="${REPO_URL}">Code source & recettes</a> · Photos <a href="https://unsplash.com">Unsplash</a></p>
+    <p><a href="${REPO_URL}">Code source & recettes</a> · Photos <a href="https://unsplash.com">Unsplash</a> & <a href="https://commons.wikimedia.org">Wikimedia Commons</a></p>
   </div>
 </footer>`;
   return pageShell({
@@ -575,7 +575,7 @@ function buildRecipePage(r) {
     ${renderHistory(recipeHistory(r.file, r.slug), r.file)}
 
     <footer class="recipe-foot">
-      <p class="ascode"><a href="${REPO_URL}/blob/main/recipes/${r.file}">Texte source de la recette</a>${c.meta.source ? ` · d’après <a href="${esc(String(c.meta.source).split(" ")[0])}">${esc(String(c.meta.source).replace(/^https?:\/\//, "").split(/[\/\s]/)[0])}</a>` : ""}</p>
+      <p class="ascode"><a href="${REPO_URL}/blob/main/recipes/${r.file}">Texte source de la recette</a>${c.meta.source ? ` · d’après <a href="${esc(String(c.meta.source).split(" ")[0])}">${esc(String(c.meta.source).replace(/^https?:\/\//, "").split(/[\/\s]/)[0])}</a>` : ""}${c.meta.photo_credit ? ` · ${esc(c.meta.photo_credit)}` : ""}</p>
       <p><button type="button" id="reset" hidden>Réinitialiser les coches</button></p>
     </footer>
   </article>
