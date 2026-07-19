@@ -1,0 +1,25 @@
+DESIGN.md
+  s_29cf399ae36f97::t_9edbb18387dd75 1-52
+.github/workflows/deploy.yml
+  s_29cf399ae36f97::t_ebffa9119bfbf2 1-41
+README.md
+  s_29cf399ae36f97::t_5e3d00a46187e5 1-100
+PRODUCT.md
+  s_29cf399ae36f97::t_1bc98bdedcc544 1-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "b4be2bd805558c93bf1be1a9be1a7f3abde73355",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
