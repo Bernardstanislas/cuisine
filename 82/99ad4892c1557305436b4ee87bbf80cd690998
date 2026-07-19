@@ -1,0 +1,19 @@
+recipes/pate-a-crepes-au-ble-noir.gram
+  s_29cf399ae36f97::t_d82dd35f52f245 10,12,14-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "8299ad4892c1557305436b4ee87bbf80cd690998",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
