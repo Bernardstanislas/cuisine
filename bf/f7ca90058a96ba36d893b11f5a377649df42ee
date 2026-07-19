@@ -1,0 +1,19 @@
+.github/workflows/deploy.yml
+  s_29cf399ae36f97::t_0a38af0dc0d010 9-11,18,30-31,33-43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "bff7ca90058a96ba36d893b11f5a377649df42ee",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
