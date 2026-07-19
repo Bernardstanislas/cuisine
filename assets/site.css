@@ -440,6 +440,39 @@ span.ref {
 .notes h2 { font-size: 1.3rem; margin-bottom: 0.3rem; }
 .notes p { margin: 0.4rem 0 0; }
 
+/* affinages (historique git de la recette) */
+
+.history { margin-block: 2.25rem; }
+.history h2 { font-size: 1.6rem; }
+
+.hist-note { color: var(--muted); font-size: 0.9375rem; margin: 0.3rem 0 0; }
+.hist-note code { background: var(--surface); padding: 0.1em 0.4em; border-radius: 5px; }
+
+.hist { list-style: none; margin: 1.1rem 0 0; padding: 0; display: grid; gap: 1rem; }
+
+.hist li { position: relative; padding-left: 1.4rem; }
+
+.hist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.hist li.creation::before { background: none; border: 2px solid var(--primary); width: 7px; height: 7px; }
+
+.hist time { color: var(--muted); font-size: 0.875rem; }
+.hist p { margin: 0.05rem 0 0.1rem; }
+
+.hist a {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.8125rem;
+}
+
 .recipe-foot { margin-block: 2.5rem 1rem; color: var(--muted); font-size: 0.9375rem; }
 .ascode code { background: var(--surface); padding: 0.1em 0.4em; border-radius: 5px; }
 
