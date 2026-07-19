@@ -4,6 +4,7 @@ import { getAST } from "@gram-lang/parser";
 import { compile, aggregateSectionIngredients } from "@gram-lang/kitchen";
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
 import { join, basename } from "node:path";
+import { execFileSync } from "node:child_process";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const DIST = join(ROOT, "dist");
@@ -112,6 +113,67 @@ function loadRecipes() {
       return { slug, file: f, source, compiled };
     })
     .sort((a, b) => a.compiled.title.localeCompare(b.compiled.title, "fr"));
+}
+
+// ------------------------------------------------- historique d'affinage
+// Convention de commit : « recette(<slug>): commentaire » (le scope est
+// facultatif quand le commit ne touche qu'une recette). Le premier commit du
+// fichier devient « Entrée au carnet » même sans convention.
+
+const DATE_FR = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+
+function recipeHistory(file, slug) {
+  let out = "";
+  try {
+    out = execFileSync(
+      "git",
+      ["log", "--follow", "--format=%H%x09%aI%x09%s", "--", `recipes/${file}`],
+      { cwd: ROOT, encoding: "utf8" }
+    );
+  } catch {
+    return []; // pas de dépôt git (archive) : le site se construit sans historique
+  }
+  const commits = out
+    .trim()
+    .split("\n")
+    .filter(Boolean)
+    .map((l) => {
+      const [sha, date, subject] = l.split("\t");
+      return { sha, date, subject };
+    });
+  if (!commits.length) return [];
+  const creation = commits[commits.length - 1];
+  const entries = [];
+  for (const c of commits) {
+    const m = c.subject.match(/^recette(?:\(([^)]*)\))?\s*:\s*(.+)$/i);
+    if (m) {
+      if (m[1] && m[1].trim() !== slug) continue; // scopé sur une autre recette
+      entries.push({ sha: c.sha, date: c.date, comment: m[2].trim(), creation: c === creation });
+    } else if (c === creation) {
+      entries.push({ sha: c.sha, date: c.date, comment: "Entrée au carnet", creation: true });
+    }
+  }
+  return entries; // du plus récent au plus ancien, création en dernier
+}
+
+function renderHistory(entries, file) {
+  if (!entries.length) return "";
+  const lis = entries
+    .map(
+      (e) => `<li${e.creation ? ' class="creation"' : ""}>
+  <time datetime="${esc(e.date.slice(0, 10))}">${esc(DATE_FR.format(new Date(e.date)))}</time>
+  <p>${esc(e.comment)}</p>
+  <a href="${REPO_URL}/commit/${e.sha}">voir le diff</a>
+</li>`
+    )
+    .join("\n");
+  return `<section class="history">
+      <h2>Affinages</h2>
+      <p class="hist-note">l'historique git de <code>${esc(file)}</code> — une recette s'améliore commit après commit</p>
+      <ol class="hist">
+${lis}
+      </ol>
+    </section>`;
 }
 
 const ingName = (compiled, id) => compiled.registry.ingredients[id]?.name ?? id;
@@ -501,6 +563,8 @@ function buildRecipePage(r) {
     </section>
 
     ${c.meta.notes ? `<aside class="notes"><h2>Note du cuisinier</h2><p>${esc(c.meta.notes)}</p></aside>` : ""}
+
+    ${renderHistory(recipeHistory(r.file, r.slug), r.file)}
 
     <footer class="recipe-foot">
       <p class="ascode">Cette recette est du code : <a href="${REPO_URL}/blob/main/recipes/${r.file}"><code>${r.file}</code></a> · <a href="recette.json"><code>recette.json</code></a>${c.meta.source ? ` · source : <a href="${esc(String(c.meta.source).split(" ")[0])}">${esc(String(c.meta.source).replace(/^https?:\/\//, "").split(/[/\s]/)[0])}</a>` : ""}</p>

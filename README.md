@@ -57,6 +57,25 @@ rétro-planning — est **calculé depuis la source**, jamais recopié à la mai
 
 4. Commit, push, merge : GitHub Actions reconstruit et publie le site.
 
+### Affiner une recette (convention de commit)
+
+L'historique d'une recette fait partie de la recette. Quand une modification
+est un **affinage** (proportions ajustées après un essai, tour de main
+corrigé…), committer avec la convention :
+
+```
+recette(<slug>): <commentaire au présent, comme une note de dégustation>
+```
+
+Exemple : `recette(pain-de-campagne): monter l'hydratation à 68 % après un four un peu sec`.
+
+Chaque page de recette affiche alors la section « Affinages » : la liste de
+ces commits (commentaire, date, lien vers le diff), extraite de
+`git log --follow` au moment du build. Le scope `(<slug>)` est facultatif si
+le commit ne touche qu'une seule recette ; le premier commit du fichier
+apparaît comme « Entrée au carnet ». Les commits hors convention
+(refactorings, typos) restent invisibles sur le site.
+
 ### Aide-mémoire Gram (le sous-ensemble utilisé ici)
 
 | Syntaxe | Sens |
