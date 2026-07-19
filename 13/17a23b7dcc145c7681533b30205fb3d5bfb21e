@@ -1,0 +1,46 @@
+recipes/soupe-a-l-oignon.gram
+  s_29cf399ae36f97::t_de4bd1a4004494 1-18
+recipes/mousse-au-chocolat.gram
+  s_29cf399ae36f97::t_2b86c3dd9c4c97 1-20
+recipes/ratatouille.gram
+  s_29cf399ae36f97::t_36b64f191fe16c 1-20
+package-lock.json
+  s_29cf399ae36f97::t_5872c6162c131e 1-1030
+recipes/pates-carbonara.gram
+  s_29cf399ae36f97::t_cd1bfd4b784e38 1-20
+recipes/canneles-bordelais.gram
+  s_29cf399ae36f97::t_f7a8de41b0e77c 1-32
+recipes/crepes.gram
+  s_29cf399ae36f97::t_aa75dc7ffc38ad 1-19
+recipes/pain-de-campagne.gram
+  s_29cf399ae36f97::t_3a9a317f0a2cfa 19,24,30,32-33,35
+  s_29cf399ae36f97::t_b1a3818e31579d 13,17,21,23,31
+  s_29cf399ae36f97::t_f6a65d6913c7cc 1-12,14-16,18,20,22,25-29,34
+recipes/tarte-aux-pommes.gram
+  s_29cf399ae36f97::t_11032bfb9103be 16
+  s_29cf399ae36f97::t_05420df713928b 1-15,17-30
+recipes/boeuf-bourguignon.gram
+  s_29cf399ae36f97::t_28784977251017 12
+  s_29cf399ae36f97::t_21bffbc69d330d 1-11,13-30
+.gitignore
+  s_29cf399ae36f97::t_f403485f617078 1-5
+package.json
+  s_29cf399ae36f97::t_5beb01954a8e0b 2-8,10-12
+  s_29cf399ae36f97::t_88020143476244 1,9,13-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "1317a23b7dcc145c7681533b30205fb3d5bfb21e",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
