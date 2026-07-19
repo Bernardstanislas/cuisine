@@ -1,0 +1,19 @@
+---
+title: 'Crêpes'
+description: "La pâte à crêpes de base, sans grumeaux et sans repos raté. Pour les dimanches pluvieux et la Chandeleur."
+category: 'Desserts'
+tags: [goûter, base, bretagne]
+portions: 4
+makes: 'Une quinzaine de crêpes'
+author: ['Stanislas']
+date: 2026-07-19
+notes: "La première crêpe est pour le cuisinier, c'est la règle. Le rhum est facultatif mais recommandé."
+---
+
+[Mélanger] Former un puits avec la @farine{250 g} dans un #saladier{}. Y casser les @œufs{3}, ajouter le @sucre{2 cs} et le @=sel{1 pincée}.
+
+[Délayer] Verser le @lait{50 cl} petit à petit en fouettant depuis le centre, pour ne pas faire de grumeaux. Incorporer le @beurre{50 g}(fondu) et le @?rhum ambré{2 cs}. La pâte doit napper la cuillère.
+
+[Reposer] Couvrir et laisser reposer ~_repos{60 min} à température ambiante : la pâte épaissit et les crêpes seront plus souples.
+
+[Cuire] Chauffer une #poêle à crêpes{} à ^{feu vif}, la graisser d'un voile de beurre. Verser une petite louche de pâte, faire tourner, cuire ~{1 min} par face jusqu'à ce que les bords blondissent. Empiler au fur et à mesure sous une assiette retournée.

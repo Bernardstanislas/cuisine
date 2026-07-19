@@ -1,0 +1,32 @@
+---
+title: 'Cannelés bordelais'
+description: "Croûte caramélisée presque noire, cœur crémeux au rhum et à la vanille. La pâtisserie qui récompense les patients."
+category: 'Desserts'
+tags: [bordeaux, rhum, vanille]
+portions: 10
+makes: '10 cannelés'
+author: ['Stanislas']
+date: 2026-07-19
+source: 'https://gram-lang.org — d’après la recette d’exemple du langage Gram'
+notes: "Le repos de 24 h est non négociable : c'est lui qui donne le cœur crémeux. Moules en cuivre pour les puristes."
+---
+
+## Appareil ~{-1d} ->&appareil
+
+[Mélanger] Dans un #saladier{}, mélanger la @farine{100 g}, le @sucre{200 g} et le @=sel{1 pincée}. ->&mélange sec{}
+
+[Chauffer] Dans une #casserole{}, porter le @lait{50 cl}, le @beurre{50 g} et la @gousse de vanille{1}(fendue et grattée) à ^{85C}. ->&lait vanillé{}
+
+[Verser] Verser le &lait vanillé{} sur le &mélange sec{} en une fois. Fouetter vigoureusement : la pâte est fluide, c'est normal.
+
+[Incorporer] Quand l'appareil a tiédi, incorporer les @jaunes d’œufs{3}<@œufs{3} et le @rhum ambré{5 cl}.
+
+[Reposer] Filmer au contact avec du #film alimentaire{} et laisser reposer au réfrigérateur ~_repos{24 h}.
+
+## Cuisson
+
+[Préchauffer] Préchauffer le #four{} à ^{240C} avec les #moules à cannelés{10}(beurrés) sur une plaque.
+
+[Cuire] Retirer la gousse, fouetter l'&appareil{} et remplir les moules aux trois quarts. Cuire ~{12 min} à ^{240C}, puis baisser à ^{180C} et poursuivre ~_cuisson{45 min} sans ouvrir le four.
+
+[Démouler] Démouler chaud sur une grille et laisser tiédir : la croûte croustille, le cœur reste tremblant. Déguster le jour même.
