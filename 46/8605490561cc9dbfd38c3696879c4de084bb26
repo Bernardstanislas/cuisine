@@ -1,0 +1,19 @@
+recipes/spaetzle.gram
+  s_29cf399ae36f97::t_a95f2d6e76ecfe 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "468605490561cc9dbfd38c3696879c4de084bb26",
+  "prompts": {},
+  "sessions": {
+    "s_29cf399ae36f97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62ff4f12-41bb-4e30-a736-11945448d7d2",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
