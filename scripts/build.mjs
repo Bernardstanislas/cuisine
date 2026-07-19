@@ -581,7 +581,7 @@ function buildRecipePage(r) {
   </article>
 </main>
 <footer class="site-footer">
-  <div class="wrap"><p><a href="${root}">${SITE_NAME}</a> · Photos <a href="https://unsplash.com">Unsplash</a></p></div>
+  <div class="wrap"><p><a href="${root}">${SITE_NAME}</a></p></div>
 </footer>`;
 
   return pageShell({
