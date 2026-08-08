@@ -1,0 +1,25 @@
+CLAUDE.md
+  s_78a0126e920020::t_e67d79dac0e913 87
+  s_78a0126e920020::t_1e9687c9bfb747 152-153
+  s_78a0126e920020::t_0139d7fd144416 97
+  s_78a0126e920020::t_167383a6965021 115-117
+  s_78a0126e920020::t_648980c2bdde5d 73,75
+  s_78a0126e920020::t_160c19dc1e99f7 1-32,34-72,74,76-86,88-96,98-114,118-151,154-171
+  s_78a0126e920020::t_7d3586a24b0e98 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "46cd67c4016dc4294fabcf316130aca11319fd0d",
+  "prompts": {},
+  "sessions": {
+    "s_78a0126e920020": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fcb5c833-405b-4c6a-9f20-17ef8f9877a8",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
