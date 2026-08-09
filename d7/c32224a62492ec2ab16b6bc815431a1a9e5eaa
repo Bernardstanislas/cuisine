@@ -1,0 +1,22 @@
+recipes/poulet-miso-gingembre-citron-vert.gram
+  s_9368d5cdab37c3::t_83cc74094cc430 3
+  s_9368d5cdab37c3::t_0364a40b254ecc 8
+  s_9368d5cdab37c3::t_b0768b2dc2af1f 1-2,4-7,9-19,21-22
+  s_9368d5cdab37c3::t_5703ee82d7b357 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "d7c32224a62492ec2ab16b6bc815431a1a9e5eaa",
+  "prompts": {},
+  "sessions": {
+    "s_9368d5cdab37c3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4dce95f4-7ab5-4909-b591-00176ec869e3",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
