@@ -1,0 +1,20 @@
+recipes/oeufs-braises-poireaux-zaatar.gram
+  s_9368d5cdab37c3::t_f302fb702f16c5 8
+  s_9368d5cdab37c3::t_8253cfeace0744 1-7,9-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "5b9b742bc69fcffb0608835098802bd5eadfad5c",
+  "prompts": {},
+  "sessions": {
+    "s_9368d5cdab37c3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4dce95f4-7ab5-4909-b591-00176ec869e3",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
