@@ -1,0 +1,26 @@
+recipes/boulettes-a-la-calabrese.gram
+  s_6b26601a276fd3::t_c5b9817de432c8 1-8,11-16,18-24,26,28,30-34,36-39
+  s_6b26601a276fd3::t_074fc4dd69136b 29
+  s_6b26601a276fd3::t_138f2624aaece4 27
+  s_6b26601a276fd3::t_ac9e8baffbd5d1 10
+  s_6b26601a276fd3::t_300ae3b57ce929 35
+  s_6b26601a276fd3::t_6dc187cbd097a0 17
+  s_6b26601a276fd3::t_15879a130c2cfd 25
+  s_6b26601a276fd3::t_112627d034c870 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "0a9c278713153acf9810b02585bb31bc3df3c7b7",
+  "prompts": {},
+  "sessions": {
+    "s_6b26601a276fd3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e5dd5cdd-d5e1-4ca7-9433-036543da1985",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Stanislas Bernard <bernardstanislas@gmail.com>"
+    }
+  }
+}
